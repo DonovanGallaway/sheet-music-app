@@ -1,8 +1,7 @@
 import {Document, Page, pdfjs} from 'react-pdf/dist/esm/entry.webpack';
 import {useState} from 'react'
-import test from '../music/test.pdf'
 
-const Sheet = ({piece}) => {
+const Sheet = ({piece, hideModal}) => {
 
     const [numPages, setNumPages] = useState(null)
     const [pageNumber, setPageNumber] = useState(1)
@@ -78,6 +77,7 @@ const Sheet = ({piece}) => {
             >
             Next
             </button>
+            <button onClick={hideModal}>Close</button>
             </div>
         </div>
     </div>

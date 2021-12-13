@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 const Index = ({pieces}) => {
     return <div>
         {pieces.map(x => {
-            return <div>
-                <Link to={"/piece/" + x.id}><h1>{x.name}</h1></Link>
-                <h2>{x.instrumentation}</h2>
+            return <div className="piece-link" key={x.id}>
+                <Link to={"/piece/" + x.id}><h2>{x.name}</h2></Link>
+                <h3>{x.instrumentation}</h3>
             </div>
         })}
     </div>

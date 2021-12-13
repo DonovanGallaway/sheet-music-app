@@ -1,10 +1,10 @@
 import Index from './pages/Index';
 import Form from './pages/Form'
 import Show from './pages/Show'
+import Header from './components/Header'
 import {useState, useEffect} from 'react'
-import {Route, Routes, Link, useNavigate} from 'react-router-dom'
-import './normalize.css'
-import './skeleton.css'
+import {Route, Routes, useNavigate} from 'react-router-dom'
+import './styles.scss'
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
     await fetch(url, {
       method: "post",
       headers: {
-        "Content-TYpe": "application/json"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(newPiece)
     })
@@ -86,8 +86,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Sheets.</h1>
-      <Link to='/new'><button>Add Sheet Music</button></Link>
+      <Header/>
       <Routes>
         <Route path='/' element={<Index pieces={pieces}/>}/>
         <Route path='/piece/:id' element={<Show

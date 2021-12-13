@@ -15,24 +15,26 @@ const Form = ({initialPiece, handleSubmit, buttonLabel}) => {
         navigate('/')
     }
     return <form onSubmit={handleSubmission}>
-        <label for="name">Name</label>
+        <label for="name">Name: </label>
         <input
             type='text'
             onChange={handleChange}
             value={formData.name}
-            name='name'/>
-        <label for='instrumentation'>Instrumentation</label>
+            name='name'/><br/>
+        <label for='instrumentation'>Instrumentation: </label>
         <input
             type='text'
             onChange={handleChange}
             value={formData.instrumentation}
             name='instrumentation'/>
-        <label for='link'>Link</label>
+            <br/>
+        <label for='link'>Link: </label>
         <input
             type='text'
             onChange={handleChange}
             value={formData.link}
             name='link'/>
+            <br/>
         <input type='submit' value={buttonLabel}/>
     </form>
 }

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+$basecolor: black;
+$text-color: white;
+$main-font: 'Shadows Into Light', cursive;
+
+body {
+    text-align: center;
+    background-color: $basecolor;
+    color: $text-color;
+    font-family: $main-font;
+}
+
+nav * {
+    margin: 0;
+}
+
+label {
+    font-size: 3em;
+}
+
+input {
+    font-size: 3em;
+}
+
+h1 {
+    font-size: 8em;
+}
+
+h2 {
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button, input[type='submit'] {
+    margin: .5em;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 2em;
+    font-family: $main-font;
+    color: $basecolor;
+    background-color: $text-color;
+}
+
+.piece-link {
+    border: 3px solid white;
+    border-style: double;
+    width: 60vw;
+    margin: 10px auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-pdf__Page__canvas {
+    margin: 10px auto;
+    height: 80% !important;
+}
+
+.modal * {
+    text-align: center;
+}
